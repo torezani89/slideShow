@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-slide {
+    display: flex;
+    justify-content: space-between;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    margin: 20vh auto;
+    border-radius: 10px;
+    box-shadow: 0 20px 30px black;
+}
+
+.container-items {
+    /* Deixar o container-items sobreposto ao container-slide */
+    position: absolute;
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    background-color: red;
+    border-radius: 10px;
+    /* transition: all 1s; o transition tem que ser no '.item' */
+    overflow: hidden; 
+    /* Para aparecer somente o que está dentro do container-items e ocultar as imagens dos lados. */
+}
+
+.item {
+    width: 50vw;
+    height: 50vh;
+    border: 10px;
+    transition: all 1s;
+}
+
+.item:first-child {
+    margin-left: -100%;
+
+}
+
+.item img {
+    width: 50vw;
+    height: 50vh;
+    border-radius: 10px;
+}
+
+.action-button {
+    border-radius: 10px;
+    color: transparent;
+    display: flex;
+    /* Alinhar horizontalmente oconteúdo dentro da div .action-button  */
+    justify-content: center;
+    /* Alinhar verticalmente oconteúdo dentro da div .action-button  */
+    align-items: center;
+    font-size: 30px;
+    user-select: none;
+    width: 40px;
+    z-index: 1;
+}
+
+.action-button:hover {
+    color: white;
+    background-color: black;
+    opacity: 0.5;
+    cursor: pointer;
+    transition: all 1s;
+}
+
+.container-bolinhas {
+    /* position: relative; */
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+    /* deixa as bolinhas alinhadas dentro do container. A bolinha marcada estava ficando mais abaixo das outras ao
+    aumentar de tamanho. */
+    align-items: center;
+}
+
+.bolinha {
+    /* position: absolute; */
+    /* display: inline-block; */
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: rgb(168, 168, 158);
+    border-radius: 50%;
+}
+
+.bolinha-mark {
+    width: 12px;
+    height: 12px;
+    background-color: black;
+    transition: background 1s;
+}
